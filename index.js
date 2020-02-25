@@ -41,6 +41,7 @@ function addNumbers(num1, num2) {
 */
 function makePersonObject(/* code here */) {
   /* code here */
+  
 }
 
 /**
@@ -58,8 +59,8 @@ function makePersonObject(/* code here */) {
 */
 function getName(/* code here */) {
   /* code here */
+  id:33;
 }
-
 /**
  * ### Challenge `makeSmartPerson`
  * 
