@@ -202,9 +202,11 @@ function getCarInfoById(inventory, idCall) {
 //fruits.sort();
 
 function sortCarInventory(inventory) {
-let sortedCars = []; {
-  sortedCars = inventory.sort();
-}
+let sortedCars = inventory.sort(function(a,b){
+  if(a.car_model < b.car_model) { return -1; }
+  if(a.car_model > b.car_model) { return 1; }
+  return 0;
+})
 return sortedCars;
 }
 
