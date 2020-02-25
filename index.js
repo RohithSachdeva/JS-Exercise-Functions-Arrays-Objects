@@ -197,8 +197,15 @@ function getCarInfoById(inventory, idCall) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
 */
-function sortCarInventory(inventory) {
 
+//var fruits = ["Banana", "Orange", "Apple", "Mango"];
+//fruits.sort();
+
+function sortCarInventory(inventory) {
+let sortedCars = []; {
+  sortedCars = inventory.sort();
+}
+return sortedCars;
 }
 
 /**
@@ -233,7 +240,7 @@ function getModelYears(inventory) {
 function getOlderCars(inventory, maxYear) {
   let olderCars = [];
   for (let i = 0; i < inventory.length; i++) {
-    if (inventory[i].car_year < maxYear) {
+    if (inventory[i].car_year <= maxYear) {
       olderCars.push(inventory[i]);
     }
   }
@@ -254,7 +261,7 @@ function getOlderCars(inventory, maxYear) {
 function getGermanCars(inventory) {
   let germanCars = [];
   for (let i = 0; i < inventory.length; i++) {
-    if (inventory[i].car_make === 'Audi) {
+    if (inventory[i].car_make === 'Audi') {
       germanCars.push(inventory[i]);
     }
     else if (inventory[i].car_make === 'Mercedes-Benz') {
@@ -269,6 +276,7 @@ function getGermanCars(inventory) {
   }
   return germanCars;
 }
+
 /**
  * ### Challenge refactor to arrow functions
  * 
